@@ -9,3 +9,23 @@ function toogleDetail(e) {
   const detail = $(item).children(".about-exp-item-detail");
   $(detail).slideToggle();
 }
+
+function onFormSubmit(e) {
+  e.preventDefault();
+  const email = $("#email");
+  const subject = $("#subject");
+  const message = $("#message");
+  if ($(email).val()) {
+    alert("Email is required");
+  } else if ($(subject).val()) {
+    alert("Subject is required");
+  } else if ($(message).val()) {
+    alert("Message is required");
+  } else if ($(email).val() && $(subject).val() && $(message).val()) {
+    $(email).val("");
+    $(subject).val("");
+    $(message).val("");
+    alert("Your message has been submited");
+  }
+  //   if($(email).val())
+}
