@@ -33,6 +33,9 @@ section::before {
 .home h3 {
   font-size: 48px;
 }
+.home img {
+  width: 100%;
+}
 .home .arrow img {
   width: 64px;
 }
@@ -125,5 +128,17 @@ section::before {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .home img {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  section::before {
+    left: -10px;
+    font-size: 64px;
   }
 }
