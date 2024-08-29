@@ -1,11 +1,24 @@
 section {
   padding: 128px;
+  position: relative;
+}
+section::before {
+  z-index: -1;
+  content: "";
+  font-size: 72px;
+  color: gray;
+  opacity: 0.25;
+  position: absolute;
+  font-weight: 700;
+  top: 20px;
+  left: -30px;
 }
 .btn {
   border: 2px solid black;
   border-radius: 24px;
 }
-.btn:hover {
+.btn:hover,
+.btn.active {
   border: 2px solid black;
   background-color: black;
   color: white;
@@ -25,6 +38,20 @@ section {
 }
 #arrow {
   animation: updown 2s infinite;
+}
+.about::before {
+  content: "About";
+}
+.about-exp-item {
+  margin-top: 24px;
+}
+.about-exp-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-exp-item-detail {
+  display: none;
 }
 @keyframes updown {
   0% {
